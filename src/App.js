@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Nav from "./Components/Navig/Nav";
+import UserContext from "./datas/context";
+import {Logo,menu} from './datas/menus'
+
+function App() { 
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserContext.Provider value={{Logo:Logo,menu:menu}} className="App"> 
+         <Nav/>          
+       </UserContext.Provider>
     </div>
   );
 }

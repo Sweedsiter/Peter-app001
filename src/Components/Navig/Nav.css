@@ -1,0 +1,29 @@
+.heat-content{
+    background: black;
+    height: fit-content;
+   }
+
+.heat-content .nav-head{
+    display: flex;
+    flex-direction: row;
+    color: antiquewhite;
+    /* padding: 8px; */
+    justify-content: space-between;
+    align-items: center;
+}
+.head-L{
+    display: flex;
+    padding-left: 1rem;
+}
+.head-R{
+    display: flex;
+    padding-right: 1rem;
+    align-items: center;
+}
+.head-R-item{
+    list-style: none;
+    padding-right: 1rem;
+}
+ .head-R .input{
+    padding: 4px;
+}
