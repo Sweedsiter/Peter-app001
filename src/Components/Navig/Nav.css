@@ -25,5 +25,22 @@
     padding-right: 1rem;
 }
  .head-R .input{
-    padding: 4px;
+    padding: 4dpx;
+    padding-left: 2rem;
+    outline: none;
 }
+.heat-content .nav-head .head-R a{
+  text-decoration-line: none;
+  color: white;
+}
+.icon-search{   
+   color: black;
+   padding-left: 1rem;
+   margin-right: -1.6rem;
+   z-index: +99;
+   padding-right: 4px;
+   border-right: 2px solid black;
+}
+.head-R .icon{   
+       font-size: 1.3rem;
+    }
