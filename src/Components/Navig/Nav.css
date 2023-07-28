@@ -1,6 +1,6 @@
 .heat-content{
     background: black;
-    height: fit-content;
+    height: 3.5rem;
    }
 
 .heat-content .nav-head{
@@ -25,22 +25,34 @@
     padding-right: 1rem;
 }
  .head-R .input{
-    padding: 4dpx;
-    padding-left: 2rem;
+    padding: 4px;    
     outline: none;
+    border-radius: 8px;
 }
-.heat-content .nav-head .head-R a{
+.head-R .R-search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.head-R a{
   text-decoration-line: none;
   color: white;
 }
 .icon-search{   
-   color: black;
-   padding-left: 1rem;
-   margin-right: -1.6rem;
-   z-index: +99;
-   padding-right: 4px;
-   border-right: 2px solid black;
+   color: white;  
+   padding-right: 6px;   
 }
 .head-R .icon{   
        font-size: 1.3rem;
     }
+.userlock{
+    color: red;
+}
+.login-bt{
+    margin: 0;   
+    border-radius: 25%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 400px) {   
+
+      }

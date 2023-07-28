@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import Nav from "./Components/Navig/Nav";
 import UserContext from "./datas/context";
 import {Logo} from './datas/menus'
@@ -11,7 +10,7 @@ function App() {
  if(checklock.name === "peter" && checklock.pass === 1234){
     df = "true" 
  }else{
-  df = "false"
+    df = "false"
  }
  console.log(df)
   return (
