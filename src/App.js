@@ -1,22 +1,26 @@
 
+import { useState } from "react";
 import Nav from "./Components/Navig/Nav";
 import UserContext from "./datas/context";
 import {Logo} from './datas/menus'
+import { Routes, Route} from "react-router-dom"
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Conext from "./Components/Conext/Conext";
 
 function App() { 
- 
- let df = ""
- const  checklock = {name:"peter",pass:1234}
- if(checklock.name === "peter" && checklock.pass === 1234){
-    df = "true" 
- }else{
-    df = "false"
- }
- console.log(df)
+  const [Search,setSearch ] = useState() 
+
+
   return (
     <div>
       <UserContext.Provider value={Logo} className="App"> 
-         <Nav checklock={checklock}/>          
+         <Nav search={(e)=>setSearch(e)}/>   
+         <Routes>
+            <Route path="/" exec element={ <Home Search={Search}/> } />          
+            <Route path="/about"  element={ <About /> } />          
+            <Route path="/conext"  element={ <Conext /> } />          
+         </Routes>  
        </UserContext.Provider>
     </div>
   );
