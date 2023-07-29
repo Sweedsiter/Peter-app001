@@ -29,7 +29,7 @@ function Home(props) {
        </div>
 
        <div className='R'>
-        <h1>Items Card</h1>       
+        <h1>Menu</h1>       
         <h1>{Search}</h1>
         <p>{PrValue}</p>
        </div>
