@@ -7,32 +7,27 @@ import { Routes, Route} from "react-router-dom"
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Conext from "./Components/Conext/Conext";
-import styled from 'styled-components'
 import './App.css'
 
 function App() { 
   const [Search,setSearch ] = useState() 
-  const [Ncolor,setNcolor ] = useState() 
-const Div = styled.div({
-  color:`${Ncolor}` ,
-  height:`100vh`,
-});
-
-
+  const [Back,setBack ] = useState() 
+  const [Color,setColor ] = useState() 
+  console.log(Back)
   return (
-    <Div>
-    
+    <div style={{color:`${Color}`,backgroundColor:`${Back}`}}>    
       <UserContext.Provider value={Logo} className="App"> 
          <Nav search={(e)=>setSearch(e)}/> 
         
          <Routes>
-            <Route path="/" exec element={ <Home search={Search} Color={(e)=>setNcolor(e)} /> } />          
+            <Route path="/" exec element={ <Home search={Search} Color={(e)=>setColor(e)} PDcolor={(e)=>setBack(e)}/> } />          
             <Route path="/about"  element={ <About /> } />          
             <Route path="/conext"  element={ <Conext /> } />          
          </Routes>  
+         
        </UserContext.Provider>  
        
-    </Div>
+    </div>
   );
 }
 
