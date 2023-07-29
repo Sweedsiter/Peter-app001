@@ -34,6 +34,7 @@ function Home({Color,}) {
 
        <Div className='R'>
         <h1>Items Card</h1>
+        <h1>Items Card2</h1>
         <h1>{Search}</h1>
         <p>{PrValue}</p>
        </Div>
