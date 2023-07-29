@@ -26,22 +26,11 @@
     padding-right: 1rem;  
    }
 
-.head-R .R-search{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.head-R input{
-    outline-style: none;
-}
 .head-R a{
   text-decoration-line: none;
   color: white;
 }
-.icon-search{   
-   color: white;  
-   padding-right: 6px;   
-}
+
 .head-R .icon{   
        font-size: 1.3rem;
     }
@@ -61,6 +50,8 @@
     font-weight: bolder;
 }
 
-@media screen and (min-width: 200px) and (max-width: 400px) {   
-
+@media screen and (min-width: 200px) and (max-width: 600px) {   
+    .head-L{
+       visibility: hidden;
+    }
       }
