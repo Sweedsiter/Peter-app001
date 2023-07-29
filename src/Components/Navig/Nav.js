@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import UserContext from '../../datas/context'
 import './Nav.css'
-import { FaSearch,FaUserLock } from 'react-icons/fa';
+import {FaUserLock } from 'react-icons/fa';
 import {NavLink } from "react-router-dom"
 function Nav() { 
     const user = useContext(UserContext) 
