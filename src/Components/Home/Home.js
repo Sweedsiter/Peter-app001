@@ -6,7 +6,7 @@ function Home(props) {
   //Colors
   const [PrValue,setPrValue] = useState() 
   const [Search,setSearch] = useState()
-  const [InitData,setinitData] = useState(Data)
+//   const [InitData,setinitData] = useState(Data)
 
   const filtersearch = Data.filter((Data)=>{  
    if(!Search){
@@ -16,15 +16,15 @@ function Home(props) {
    }
  })
 
- const prvalue = Data.filter((Data)=>{
-   if(!PrValue){
-       return Data
-   }else{
-     return  (
-      Data.price>PrValue      
-      )
-   }
- })
+//  const prvalue = Data.filter((Data)=>{
+//    if(!PrValue){
+//        return Data
+//    }else{
+//      return  (
+//       Data.price>PrValue      
+//       )
+//    }
+//  })
 
 
 
