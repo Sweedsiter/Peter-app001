@@ -60,7 +60,7 @@ function Home(props) {
 
             <div className='items setFlex-R'>
                  {
-                InitData.map((even,index)=>{
+                filtersearch.map((even,index)=>{
                    return(           
                          <div className='item' key={index}>
                                 <img src={even.image} alt="#" ></img> 
