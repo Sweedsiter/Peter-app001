@@ -44,14 +44,16 @@ input{
     flex-wrap: wrap; 
     justify-content: left;
     position: absolute;
+    align-items: center;
 }
 .items .item{
     position: relative;
     width: 200px;
     height: fit-content;
-    padding: 10px;
-    margin: 6px;    
+    padding: 1remx;
+    margin: 6px;
 }
+
 .items .item img{
     width: 80%;
     display: flex;

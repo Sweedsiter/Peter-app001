@@ -6,27 +6,14 @@ function Home(props) {
   //Colors
   const [PrValue,setPrValue] = useState() 
   const [Search,setSearch] = useState()
-//   const [InitData,setinitData] = useState(Data)
 
   const filtersearch = Data.filter((Data)=>{  
-   if(!Search){
-       return Data
-   }else{
-     return ( Data.name.includes(Search) || (Data.price>PrValue))
+   if(Search){
+      return ( Data.name.includes(Search))
+   }else{      
+      return Data.price > PrValue        
    }
  })
-
-//  const prvalue = Data.filter((Data)=>{
-//    if(!PrValue){
-//        return Data
-//    }else{
-//      return  (
-//       Data.price>PrValue      
-//       )
-//    }
-//  })
-
-
 
   return (
     <div className='H-contener'>    
@@ -65,7 +52,7 @@ function Home(props) {
                          <div className='item' key={index}>
                                 <img src={even.image} alt="#" ></img> 
                                  <h3 className='setFlex-R'><p>{even.name}</p> <p>{even.price}</p></h3>                                
-                                 <button>Details</button>
+                                 <button>Click Details</button>
                           </div>
                     )})  
                  }   
