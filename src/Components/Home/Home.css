@@ -39,6 +39,25 @@ input{
     margin: 4px;
 }
 
+/* R contents CSS */
+.items {
+    flex-wrap: wrap; 
+    justify-content: left;
+    position: absolute;
+}
+.items .item{
+    position: relative;
+    width: 200px;
+    height: fit-content;
+    padding: 10px;
+    margin: 6px;    
+}
+.items .item img{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* media */
 @media screen and (min-width: 200px) and (max-width: 600px) {   
     .H-contener{
@@ -57,4 +76,14 @@ input{
         width: 90%;  
         align-items: center;     
     }
+    .items {
+        flex-wrap: wrap;       
+        width: 100%;
+        flex-wrap: wrap; 
+        justify-content: left;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
 }
