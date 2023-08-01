@@ -45,20 +45,29 @@ input{
     justify-content: left;
     position: absolute;
     align-items: center;
-}
-.items .item{
-    position: relative;
-    width: 200px;
-    height: fit-content;
-    padding: 1remx;
-    margin: 6px;
+  
 }
 
+.items .item{  
+    width: 200px;   
+    margin: 8px;
+    padding: 8px;
+}
+.itemB{  
+    width: 100%;
+    padding-bottom: 8px;
+}
 .items .item img{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 90%;
+    box-shadow: 0px 0px 4px gray;
+    padding: 10px;
+}
+.items .item h3 , p {
+    padding: 0rem 4px;
+    margin: 4px;
+} 
+.items .item button{
+    margin-left: 1rem;
 }
 /* media */
 @media screen and (min-width: 200px) and (max-width: 600px) {   
@@ -67,15 +76,15 @@ input{
         flex-direction: column;
         width: 100%; 
         font-size: 14px; 
-        margin: 0;
-        padding: 0;      
+        margin: -1rem;
+        padding: 0; 
+        height: fit-content;     
     }
     .H-contener .L{   
-        width: 90%;  
+        width: 90%;        
         align-items: center;     
     }
-    .H-contener .R{   
-        width: 90%;  
+    .H-contener .R{ 
         align-items: center;     
     }
     .items {
@@ -84,8 +93,21 @@ input{
         flex-wrap: wrap; 
         justify-content: left;
         flex-direction: row;
-        justify-content: center;
-        width: 100%;
-    }
+        justify-content: center;           
 
+    }
+    .items .item{  
+        width: fit-content; 
+        padding: 1rem; 
+        margin-right: 2rem;
+        
+    
+    }
+  
+    .items .item img{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+     
 }

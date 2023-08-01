@@ -10,8 +10,11 @@ function Home(props) {
   const filtersearch = Data.filter((Data)=>{  
    if(Search){
       return ( Data.name.includes(Search))
-   }else{      
-      return Data.price > PrValue        
+   }else if(!PrValue){
+      return Data
+   }
+   else{    
+      return Data.price > PrValue
    }
  })
 
@@ -50,9 +53,11 @@ function Home(props) {
                 filtersearch.map((even,index)=>{
                    return(           
                          <div className='item' key={index}>
-                                <img src={even.image} alt="#" ></img> 
-                                 <h3 className='setFlex-R'><p>{even.name}</p> <p>{even.price}</p></h3>                                
-                                 <button>Click Details</button>
+                                 <img src={even.image} alt="#" ></img> 
+                                  <div className='itemB'>
+                                    <h3 className='setFlex-R'><p>{even.name}</p> <p>{even.price}</p></h3>                                
+                                     <button>Click Details</button>
+                                  </div>
                           </div>
                     )})  
                  }   
