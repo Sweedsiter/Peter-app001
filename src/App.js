@@ -13,16 +13,15 @@ import './App.css'
 
 function App() { 
   const [Search,setSearch ] = useState() 
-  const [Back,setBack ] = useState() 
   const [Color,setColor ] = useState() 
 
   return (
-    <div style={{color:`${Color}`,backgroundColor:`${Back}`}}>    
+    <div style={{color:`${Color}`}}>    
       <UserContext.Provider value={Logo} className="App"> 
          <Nav search={(e)=>setSearch(e)}/> 
         
          <Routes>
-            <Route path="/" exec element={ <Home  search={Search} Color={(e)=>setColor(e)} PDcolor={(e)=>setBack(e)}/> } />          
+            <Route path="/" exec element={ <Home  search={Search} Color={(e)=>setColor(e)} /> } />          
             <Route path="/about"  element={ <About /> } />          
             <Route path="/conext"  element={ <Conext /> } />          
          </Routes>  

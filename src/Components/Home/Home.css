@@ -69,6 +69,9 @@ input{
 .items .item button{
     margin-left: 1rem;
 }
+.active-H{
+    color: red;
+}
 /* media */
 @media screen and (min-width: 200px) and (max-width: 600px) {   
     .H-contener{

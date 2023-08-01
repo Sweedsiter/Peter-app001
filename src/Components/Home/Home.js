@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import './Home.css'
 import Data from '../../datas/Data'
+import {Link } from "react-router-dom"
+
 function Home(props) {
-  const {Color,PDcolor} = props
+  const {Color} = props
   //Colors
   const [PrValue,setPrValue] = useState() 
   const [Search,setSearch] = useState()
@@ -12,8 +14,7 @@ function Home(props) {
       return ( Data.name.includes(Search))
    }else if(!PrValue){
       return Data
-   }
-   else{    
+   }else{    
       return Data.price > PrValue
    }
  })
@@ -24,8 +25,7 @@ function Home(props) {
        <div className='L setFlex-C'>
           <div className='setColor border-under' >
               <h3 > What You need Color in App?</h3>
-              <div className='setFlex-R'>Font color  <input type="color" onChange={(e)=>Color(e.target.value)}/></div> 
-              <div className='setFlex-R'>background-Color<input type="color" onChange={(e)=>PDcolor(e.target.value)} /></div>                          
+              <div className='setFlex-R'>Font color  <input type="color" onChange={(e)=>Color(e.target.value)}/></div>                   
           </div>
           <div className='border-under'>
              <h3>Your search Price ?</h3>
@@ -38,7 +38,19 @@ function Home(props) {
               <p>Search Text</p>
               <input type="text"  placeholder="Search" onChange={(e)=>setSearch(e.target.value)}/>
           </div>  
+          <div className='border-under'>  
+              <p>Search Product</p>
+              <ul>
+                <li><Link to="/" exact   activeClassName="active-H" >Elictronics</Link></li>
+                <li><Link to="/" exact   activeClassName="active-H" >Fasion Girl</Link></li>
+                <li><Link to="/" exact   activeClassName="active-H" >Fasion Boy</Link></li>
+                <li><Link to="/" exact   activeClassName="active-H" >Fasion Man</Link></li>
+                <li><Link to="/" exact   activeClassName="active-H" >Fasion Woman</Link></li>
+              </ul>
+          </div> 
        </div>
+
+
        {/* Home R contents */}
        <div className='R'>
            <div className='main-item setFlex-R'>
