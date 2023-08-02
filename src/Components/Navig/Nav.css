@@ -7,8 +7,7 @@
 .heat-content .nav-head{
     display: flex;
     flex-direction: row;
-    color: antiquewhite;
- 
+    color: antiquewhite; 
     justify-content: space-between;
     align-items: center;
 }

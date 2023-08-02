@@ -40,12 +40,12 @@ function Home(props) {
           </div>  
           <div className='border-under'>  
               <p>Search Product</p>
-              <ul>
-                <li><Link to="/" exact   activeClassName="active-H" >Elictronics</Link></li>
-                <li><Link to="/" exact   activeClassName="active-H" >Fasion Girl</Link></li>
-                <li><Link to="/" exact   activeClassName="active-H" >Fasion Boy</Link></li>
-                <li><Link to="/" exact   activeClassName="active-H" >Fasion Man</Link></li>
-                <li><Link to="/" exact   activeClassName="active-H" >Fasion Woman</Link></li>
+              <ul className='Ull'>
+                <li><Link to="/" exact  className='a'  activeClassName="active" >Elictronics</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Girl</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Boy</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Man</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Woman</Link></li>
               </ul>
           </div> 
        </div>
