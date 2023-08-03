@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import './Home.css'
 import Data from '../../datas/Data'
 import {Link } from "react-router-dom"
@@ -8,6 +8,8 @@ function Home(props) {
   //Colors
   const [PrValue,setPrValue] = useState() 
   const [Search,setSearch] = useState()
+  const [S_click,setS_click] = useState("")
+  const [num,setNum] = useState(0)
 
   const filtersearch = Data.filter((Data)=>{  
    if(Search){
@@ -18,7 +20,15 @@ function Home(props) {
       return Data.price > PrValue
    }
  })
+ const reducer =(state,action)=>{
+    if(action.type === "Elictronics"){
+       return state = "Elictronics"
+    }
+ }
+ const [state,dispatch] = useReducer(reducer,num);
 
+console.log(S_click)
+console.log(state)
   return (
     <div className='H-contener'>    
      {/* Home L contents */}  
@@ -41,15 +51,16 @@ function Home(props) {
           <div className='border-under'>  
               <p>Search Product</p>
               <ul className='Ull'>
-                <li><Link to="/" exact  className='a'  activeClassName="active" >Elictronics</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Girl</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Boy</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Man</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" >Fasion Woman</Link></li>
+                <li><Link to="/" exact  className='a'  activeClassName="active" onClick={()=>dispatch({type : "Elictronics"})} >Elictronics</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Girl")}>Fasion Girl</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Boy")}>Fasion Boy</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Man")}>Fasion Man</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Woman")}>Fasion Woman</Link></li>
               </ul>
+              <h1>{state}</h1>
           </div> 
        </div>
-
+     
 
        {/* Home R contents */}
        <div className='R'>
