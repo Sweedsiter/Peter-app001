@@ -8,8 +8,8 @@ function Home(props) {
   //Colors
   const [PrValue,setPrValue] = useState() 
   const [Search,setSearch] = useState()
-  const [S_click,setS_click] = useState("")
-  const [num,setNum] = useState(0)
+
+  const num = "Click me Plaese"
 
   const filtersearch = Data.filter((Data)=>{  
    if(Search){
@@ -23,12 +23,18 @@ function Home(props) {
  const reducer =(state,action)=>{
     if(action.type === "Elictronics"){
        return state = "Elictronics"
+    }else if(action.type === "Fasion Girl"){
+      return state = "Fasion Girl"
+    }else if(action.type === "Fasion Boy"){
+      return state = "Fasion Boy"
+    }else if(action.type === "Fasion Man"){
+      return state = "Fasion Man"
+    }else if(action.type === "Fasion Woman"){
+      return state = "Fasion Woman"
     }
  }
  const [state,dispatch] = useReducer(reducer,num);
 
-console.log(S_click)
-console.log(state)
   return (
     <div className='H-contener'>    
      {/* Home L contents */}  
@@ -52,10 +58,10 @@ console.log(state)
               <p>Search Product</p>
               <ul className='Ull'>
                 <li><Link to="/" exact  className='a'  activeClassName="active" onClick={()=>dispatch({type : "Elictronics"})} >Elictronics</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Girl")}>Fasion Girl</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Boy")}>Fasion Boy</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Man")}>Fasion Man</Link></li>
-                <li><Link to="/" exact className='a'  activeClassName="active" onClick={(e)=>setS_click("Fasion Woman")}>Fasion Woman</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={()=>dispatch({type : "Fasion Girl"})}>Fasion Girl</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={()=>dispatch({type : "Fasion Boy"})}>Fasion Boy</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={()=>dispatch({type : "Fasion Man"})}>Fasion Man</Link></li>
+                <li><Link to="/" exact className='a'  activeClassName="active" onClick={()=>dispatch({type : "Fasion Woman"})}>Fasion Woman</Link></li>
               </ul>
               <h1>{state}</h1>
           </div> 
